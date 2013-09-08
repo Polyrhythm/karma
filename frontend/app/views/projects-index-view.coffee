@@ -33,14 +33,27 @@ module.exports = class ProjectsIndexView extends View
   height: ->
     $('#map-canvas, .project-list').height $(window).height() - 66
 
-    $(window).resize $('#map-canvas, .project-list').height($(window).height() - 106)
+    $(window).resize(
+      $('#map-canvas, .project-list').height($(window).height() - 106)
+    )
 
     $ ->
       initialize = ->
-        myLatlng = new google.maps.LatLng(37.7756,-122.4193)
+
+        coords1 = new google.maps.LatLng(37.7756,-122.4193)
+        coords2 = new google.maps.LatLng(37.774196, -122.443657)
+        coords3 = new google.maps.LatLng(37.768226, -122.471809)
+        coords4 = new google.maps.LatLng(37.798344, -122.411041)
+        coords5 = new google.maps.LatLng(37.814077, -122.262039)
+
+        $project1 = document.getElementById 'project1'
+        $project2 = document.getElementById 'project2'
+        $project3 = document.getElementById 'project3'
+        $project4 = document.getElementById 'project4'
+
         mapOptions = {
           zoom: 12
-          center: myLatlng
+          center: coords1
           mapTypeId: google.maps.MapTypeId.ROADMAP
         }
 
@@ -50,20 +63,45 @@ module.exports = class ProjectsIndexView extends View
 
         economicMarker = 'images/economic.png'
         marker = new google.maps.Marker({
-          position: myLatlng
+          position: coords1
           map: map
-          title: 'Hello World!'
+          title: 'Save the Bay'
           # icon: economicMarker
         })
 
-        myLatlngtwo = new google.maps.LatLng(37.7656,-122.4093)
         marker2 = new google.maps.Marker({
-          position: myLatlngtwo
+          position: coords2
           map: map
-          title: 'Hello World!'
-          icon: economicMarker
+          title: 'Cat Care'
+          # icon: economicMarker
         })
-   
+
+        marker3 = new google.maps.Marker {
+          position: coords3
+          map: map
+          title: 'Soccer in the Park'
+        }
+
+        marker4 = new google.maps.Marker {
+          position: coords4
+          map: map
+          title: 'Rolling Stones Animal Help'
+        }
+
+        marker5 = new google.maps.Marker {
+          position: coords5
+          map: map
+          title: 'Art Murmur'
+        }
+
+        google.maps.event.addListener marker, 'click', ->
+          document.window.location '/projects/1'
+        
+        google.maps.event.addListener map, 'center_changed', ->
+          window.setTimeout ->
+            map.panTo marker.getPosition()
+          , 3000
+
       initialize()
 
   render: ->
