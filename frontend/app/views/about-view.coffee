@@ -7,3 +7,10 @@ module.exports = class AboutView extends View
 
   render: ->
     super
+
+    setInterval ->
+      $('.about-tag').hide()
+      setTimeout ->
+        $('.about-tag').show()
+      , 250
+    , 500
