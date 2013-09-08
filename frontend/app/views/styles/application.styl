@@ -2,15 +2,21 @@
 // No more vendor prefixes. http://visionmedia.github.com/nib/
 @import 'nib'
 
+@import '_site'
 @import '_header'
+@import '_footer'
 
 // Apply a natural box layout model to all elements.
 // http://paulirish.com/2012/box-sizing-border-box-ftw/
 *
   box-sizing: border-box
 
+html, body
+  padding: 0
+  margin: 0
+  width: 100%
+  height: 100%
+
 a
-  &:visited
-    color: default
   &:hover
     text-decoration: none
