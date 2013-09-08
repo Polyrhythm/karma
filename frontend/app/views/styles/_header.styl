@@ -1,26 +1,31 @@
+#header-container
+  padding: 58px 0 10px 0
+  width: 100%
+  max-width: 100%
+
 .header
   width: 100%
-  position: fixed
-  border: 1px solid #ccc
+  position: absolute
+  border: 1px solid #34ACF7
   padding: 1em 0 
   top: 0
   left: 0
-  background: white
+  background: karmaBlue
+  z-index: 500
 
   .logo
     float: left
     margin-left: 2em
     display: inline-block
-    width: 80px
-    height: 30px
-    cursor: pointer
-    background: gray
-    transition-property: background
+    transition-property: color
     transition-duration: 0.3s
+    font-family: 'Raleway', sans-serif
+    font-size: 2em
+    color: white
 
     &:hover
-      background: black
-      transition-property: background
+      color: black
+      transition-property: color
       transition-duration: 0.3s
 
  .search-bar
@@ -46,8 +51,8 @@
     float: right
     margin-right: 2em
     cursor: pointer
-    width: 30px
-    height: 30px
+    width: 40px
+    height: 40px
     border: 4px double gray
 
   .dropdown
@@ -120,6 +125,7 @@
 
 @media screen and (max-width: 720px)
   .header
+
     .mobile-nav
       display: inline-block
 

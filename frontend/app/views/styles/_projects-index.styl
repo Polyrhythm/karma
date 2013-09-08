@@ -1,0 +1,80 @@
+.list-map
+  position: absolute !important
+  top: 1em !important
+  right: 2.8em
+  z-index: 600
+  margin-right: 2em
+  padding: 0.2em 0.6em
+  border-radius: 5px
+  border: 1px solid white
+  cursor: pointer
+  color: white
+  position: relative
+  top: 0.2em
+  transition-property: color, border
+  transition-duration: 0.3s
+  display: none
+
+  &:hover
+    color: black
+    border-color: black
+    transition-property: color, border
+    transition-duration: 0.3s
+
+.projects-list-container, .projects-map-container
+  margin: 0
+
+.projects-list-container
+  position: relative
+  z-index: 10
+  box-shadow: rgba(50,50,50,0.3) 5px 0 5px
+  border-bottom-right-radius: 5px
+
+  .project-list
+    .project-li
+      text-align: left
+      padding: 1em
+      border-bottom: 2px solid #ccc
+      transition-property: background
+      transition-duration: 0.3s
+      cursor: pointer
+
+      &:hover
+        background: #fdfdfd
+        transition-property: background
+        transition-duration: 0.3s
+
+      .project-title
+        font-size: 1.5em
+
+      .project-org
+        font-size: 1em
+        font-weight: 100
+
+      .impact-list, .causes-list
+        padding: 0
+        padding-right: 1em
+
+        .impact-li, .causes-li
+          display: inline-block
+          margin-right: 0.2em
+          font-weight: bold
+          white-space: nowrap
+          font-size: 0.8em
+
+        .impact-li
+          color: karmaBlue
+
+.projects-map-container
+  background: #ddd
+  height: 300px
+
+@media screen and (max-width: 720px)
+  .list-map
+    display: inline-block
+
+  .projects-list-container, .projects-map-container
+    width: 100%
+
+    &.inactive
+      display: none

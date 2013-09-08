@@ -8,6 +8,12 @@ module.exports = class HeaderView extends View
   id: 'header'
   template: template
 
+  initialize: ->
+    super
+    $('.search-bar > input').autocomplete {
+      appendTo: '.search-bar'
+    }
+
   events:
     'click .mobile-nav': 'mobileDropdown'
     'click .navigation': 'dropdown'
