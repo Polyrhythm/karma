@@ -3,7 +3,7 @@ template = require 'views/templates/header'
 
 module.exports = class HeaderView extends View
   autoRender: yes
-  className: 'header'
+  className: 'header group'
   region: 'header'
   id: 'header'
   template: template
