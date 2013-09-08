@@ -164,49 +164,6 @@ bottom : -.25em; }
 
 /* LINKS =============================================================================  */
 
-a { 
-color : #cc1122;
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
-text-decoration: none;
-}
-
-a:visited { 
-color : #ee3344; }
-
-a:focus { 
-outline : thin dotted; 
-color : rgb(0,0,0); }
-
-a:hover, 
-a:active { 
-outline : 0;
-color : #dd2233;
-}
-
-
-footer a { 
-color : #ffffff;
--webkit-transition: all 0.3s ease;
--moz-transition: all 0.3s ease;
--o-transition: all 0.3s ease;
-transition: all 0.3s ease;
-}
-
-footer a:visited { 
-color : #fff; }
-
-footer a:focus { 
-outline : thin dotted; 
-color : rgb(0,0,0); }
-
-footer a:hover, 
-footer a:active { 
-outline : 0;
-color : #fff;
-}
 
 
 /* IMAGES ============================================================================= */

@@ -3,13 +3,17 @@ a.logo(href="/")
   input(type="text", placeholder="Enter a keyword...")
 .navigation
 ul.dropdown
-  li.nav-li
-    a(href="/about") About
-  li.nav-li
-    a(href="/login") Login
+  a(href="/about").nav-li
+    li
+      | About
+  a(href="/login").nav-li
+    li
+      | Login
 .mobile-nav.icon-reorder
 ul.mobile-dropdown
-  li.mobile-nav-li
-    a(href="/about") About
-  li.mobile-nav-li
-    a(href="/login") Login
+  a(href="/about").mobile-nav-li
+    li
+      | About
+  a(href="/login").mobile-nav-li
+    li
+      | Login
